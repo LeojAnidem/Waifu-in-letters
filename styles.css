@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 6.25%;
+}
+
+body {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%; 
+    height: 100vh;
+
+    background-color: #272727;
+    color: #eaeaea;
+
+    font-family: 'Silkscreen', cursive;
+    font-size: 16rem;
+}
+
+
+.waifu-container {
+    display: grid;
+    grid-template-columns: auto .2fr;
+    place-items: center;
+    gap: 20px;
+
+    max-width: 700px;
+    max-height: 700px;
+    width: 80%;
+    height: 70%;
+
+
+    background-image: url('https://ih1.redbubble.net/image.738265857.0302/flat,750x,075,f-pad,750x1000,f8f8f8.u3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+}
+
+.waifu-container > h1 {
+    writing-mode: vertical-lr;
+    font-size: 40rem;
+}
+
+.waifu-container > p {
+    overflow: hidden;
+    
+    width: 100%;
+    height: 100%;
+
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-align: justify;
+    line-height: 15rem;
+}
+
+@media screen and (max-width: 520px) {
+    .waifu-container {
+        grid-template-columns: auto; 
+        background-size: cover;
+        background-attachment: fixed;
+        gap: 40px;
+    }
+
+    .waifu-container > h1 {
+        writing-mode: horizontal-tb;
+        font-size: 32rem;
+    }
+}
